@@ -1,3 +1,33 @@
 // Place all the styles related to the welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+$main-margin: 5px;
+$border: 1px solid #ccc;
+$radius: 5px;
+
+aside {
+  background: #1f8dd6;
+  padding: 1.5em 1em;
+  color: #fff;
+}
+
+.content {
+  width: 100%;
+  height: 100%;
+  display: block;
+  text-align: center;
+  letter-spacing: normal;
+}
+
+.left, .right {
+  margin: $main-margin;
+  border-radius: $radius;
+}
+
+.right-content {
+  width: 100%;
+  height: 300px;
+  border: $border;
+  border-radius: $radius;
+}

@@ -25,9 +25,10 @@ aside {
   border-radius: $radius;
 }
 
-.right-content {
+#right-content {
   width: 100%;
   height: 300px;
   border: $border;
   border-radius: $radius;
+  overflow: auto;
 }

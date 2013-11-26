@@ -4,20 +4,24 @@
   <div class="pure-g">
     <div class="pure-u-1-2">
       <div class="left">
-        <form class="pure-form">
-          <fieldset>
-            <input type="text">
-            <button class="pure-button pure-button-primary">Create</button>
-          </fieldset>
-        </form>
+        <%= form_for :task, remote: true, url: {action: 'create_task'}, html: {class: 'pure-form'} do |f| %>
+            <fieldset>
+              <%= f.text_field :name %>
+              <%= f.submit 'Create', {class: 'pure-button pure-button-primary'} %>
+            </fieldset>
+        <% end %>
       </div>
     </div>
 
     <div class="pure-u-1-2">
       <div class="right">
-        <p>0 requests</p>
+        <p id="count"><%= @tasks.length %> tasks</p>
 
-        <div class="right-content"/>
+        <div id="right-content">
+          <% @tasks.each do |task| %>
+              <div><%= task.name %></div>
+          <% end %>
+        </div>
       </div>
     </div>
   </div>

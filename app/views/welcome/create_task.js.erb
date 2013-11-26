@@ -1,3 +1,8 @@
-$('#right-content').append('<div><%= @task.name %></div>')
-$('#right-content').append('<div><%= @task.name %></div>')
+// clear text_field
+$('#task_name_field').val('');
+
+// add new div element to right container, render time when model was created
+$('#right-content').append("<div class='right-content-item'><%= @task.created_at.to_time %></div>");
+
+// update right content co
 $('#count').html(<%= Task.count %> + ' tasks');

@@ -6,7 +6,7 @@
       <div class="left">
         <%= form_for :task, remote: true, url: {action: 'create_task'}, html: {class: 'pure-form'} do |f| %>
             <fieldset>
-              <%= f.text_field :name %>
+              <%= f.text_field :name, id: 'task_name_field' %>
               <%= f.submit 'Create', {class: 'pure-button pure-button-primary'} %>
             </fieldset>
         <% end %>
@@ -19,7 +19,7 @@
 
         <div id="right-content">
           <% @tasks.each do |task| %>
-              <div><%= task.name %></div>
+              <div class="right-content-item"><%= task.created_at.to_time %></div>
           <% end %>
         </div>
       </div>

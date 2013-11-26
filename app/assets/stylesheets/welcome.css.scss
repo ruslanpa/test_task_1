@@ -7,7 +7,7 @@ $border: 1px solid #ccc;
 $radius: 5px;
 
 aside {
-  background: #1f8dd6;
+  background: #000;
   padding: 1.5em 1em;
   color: #fff;
 }
@@ -31,4 +31,11 @@ aside {
   border: $border;
   border-radius: $radius;
   overflow: auto;
+}
+
+.right-content-item {
+  background-color: #0078e7;
+  color: #fff;
+  border-bottom: 1px solid;
+  padding: 0.5em;
 }
